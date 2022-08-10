@@ -1,13 +1,81 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  background: #3f444a;
+}
+
+#root {
+  display: flex;
+  padding: 2rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slide {
+  margin: auto;
+}
+.carousel-inner {
+  max-height: 80vh;
+  border-radius: 8px;
+  background-color: #636568;
+  border: 1px solid #000;
+}
+/* --------- */
+
+.active {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out 0s;
+}
+.active img {
+  /*transition: opacity 0.7s ease-in-out 0s;*/
+}
+.inactive {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out 0s;
+  display: none;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators {
+  transition: all 0.3s ease-in 0s;
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0));
 }
